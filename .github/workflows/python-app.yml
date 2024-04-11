@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'
+          python-version: '3.9'
 
       - name: Install dependencies
         run: |
@@ -29,4 +29,4 @@ jobs:
       - name: Generate contribution image
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_GITHUB_TOKEN }}
-        run: python sd.py
+        run: python3.9 sd.py
