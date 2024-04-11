@@ -32,6 +32,10 @@ def fetch_contributions(username):
     return contributions_count
 
 def plot_contributions(contributions):
+    if not sorted_dates:
+        print("No dates to process. Exiting.")
+        exit(0)
+    
     # Sort the dates
     sorted_dates = sorted(contributions.keys())
     
